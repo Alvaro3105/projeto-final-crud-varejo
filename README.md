@@ -1,50 +1,67 @@
-# ProjetoCrudVarejo 🛒
+# Projeto CRUD Varejo
 
-O **ProjetoCrudVarejo** é uma aplicação desktop desenvolvida em **C#** utilizando o framework **.NET (Windows Forms)**. O sistema foi projetado para gerenciar operações essenciais de um comércio varejista através de funcionalidades completas de CRUD (Create, Read, Update, Delete) para clientes e fornecedores.
+Aplicação desktop acadêmica desenvolvida em **C# com Windows Forms** para praticar operações CRUD e persistência em **MySQL**.
 
----
+## Funcionalidades
 
-## 🚀 Funcionalidades
+- cadastro, consulta, edição e exclusão de clientes;
+- cadastro, consulta, edição e exclusão de fornecedores;
+- tela principal para navegação entre os módulos;
+- persistência dos dados em banco MySQL.
 
-- **Tela Principal (`frmPrincipal`):** Painel de navegação centralizado para acesso aos módulos do sistema.
-- **Gestão de Clientes:**
-  - Cadastro, consulta, edição e exclusão de clientes (`frmCliente`).
-  - Classe de regras/entidade de cliente (`Cliente.cs`).
-  - Camada de persistência/conexão dedicada a clientes (`ConexaoCliente.cs`).
-- **Gestão de Fornecedores:**
-  - Cadastro, consulta, edição e exclusão de fornecedores (`frmfornecedor`).
-  - Classe de regras/entidade de fornecedor (`Fornecedor.cs`).
-  - Camada de persistência/conexão dedicada a fornecedores (`ConexaoFornecedor.cs`).
+## Tecnologias
 
----
+- C#
+- .NET Framework 4.7.2
+- Windows Forms
+- MySQL
+- MySql.Data
+- NuGet
 
-## 🛠️ Tecnologias e Dependências Utilizadas
-
-- **Linguagem:** C#
-- **Interface Gráfica:** Windows Forms (WinForms)
-- **Framework Base:** .NET Framework / .NET Core (compatível com Windows)
-- **Gerenciamento de Pacotes:** NuGet
-- **Bibliotecas Principais:**
-  - `BouncyCastle.Cryptography` (v2.6.2): Para suporte a operações seguras de criptografia e assinaturas digitais.
-  - `Google.Protobuf` (v3.32.0): Para serialização eficiente de dados estruturados.
-
----
-
-## 📂 Estrutura do Projeto
-
-Abaixo estão destacados os componentes fundamentais encontrados no código-fonte principal:
+## Estrutura principal
 
 ```text
 ProjetoCrudVarejo/
-│
-├── Cliente.cs                  # Modelo/Entidade de Clientes
-├── ConexaoCliente.cs           # Métodos de banco de dados/conexão para Clientes
-├── frmCliente.cs               # Interface visual (Form) para o CRUD de Clientes
-│
-├── Fornecedor.cs               # Modelo/Entidade de Fornecedores
-├── ConexaoFornecedor.cs        # Métodos de banco de dados/conexão para Fornecedores
-├── frmfornecedor.cs            # Interface visual (Form) para o CRUD de Fornecedores
-│
-├── frmPrincipal.cs             # Tela inicial e menu de navegação do sistema
-├── Program.cs                  # Ponto de entrada (Main) da aplicação
-└── App.config                  # Arquivo de configuração (Ex: Strings de Conexão)
+├── Cliente.cs
+├── ConexaoCliente.cs
+├── ConexaoFornecedor.cs
+├── frmCliente.cs
+├── frmfornecedor.cs
+├── frmPrincipal.cs
+├── Program.cs
+├── App.config
+├── ProjetoCrudVarejo.csproj
+└── packages.config
+```
+
+Os diretórios gerados pelo Visual Studio e pelo processo de compilação (`.vs`, `bin`, `obj` e `packages`) não fazem parte do código-fonte versionado.
+
+## Banco de dados
+
+O projeto utiliza uma instância local do MySQL com o banco:
+
+```text
+projetocrudvarejo
+```
+
+A configuração atual do projeto foi criada para ambiente acadêmico/local. Em um ambiente real, credenciais e strings de conexão devem ser movidas para configuração externa e não ficar fixas no código.
+
+## Como executar
+
+1. Clone o repositório.
+2. Abra `ProjetoCrudVarejo.sln` no Visual Studio.
+3. Restaure os pacotes NuGet.
+4. Configure o MySQL local e crie o banco `projetocrudvarejo`.
+5. Execute o projeto pelo Visual Studio.
+
+## Contexto
+
+Projeto acadêmico desenvolvido durante a formação técnica em TI para praticar C#, Windows Forms, CRUD e acesso a banco de dados.
+
+## Autor
+
+**Álvaro Pires de Souza**
+
+- Portfólio: https://alvaro3105.github.io/Portfolio/
+- GitHub: https://github.com/Alvaro3105
+- LinkedIn: https://www.linkedin.com/in/alvaro-pires-de-souza/
