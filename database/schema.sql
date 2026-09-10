@@ -1,0 +1,19 @@
+CREATE DATABASE IF NOT EXISTS projetocrudvarejo
+  CHARACTER SET utf8mb4
+  COLLATE utf8mb4_unicode_ci;
+
+USE projetocrudvarejo;
+
+CREATE TABLE IF NOT EXISTS tblCliente (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(120) NOT NULL,
+    sexo CHAR(1) NOT NULL,
+    telefone VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS tblFornecedor (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(120) NOT NULL,
+    cnpj VARCHAR(20) NOT NULL,
+    razao_social VARCHAR(160) NOT NULL
+);
