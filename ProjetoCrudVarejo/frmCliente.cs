@@ -24,7 +24,7 @@ namespace ProjetoCrudVarejo
         {
             return !string.IsNullOrWhiteSpace(Txtnome.Text)
                 && !string.IsNullOrWhiteSpace(txtelefone.Text)
-                && (RbdMasculino.Checked || RbdFeminino.Checked);
+                && (RbdMasculino.Checked || radioButton2.Checked);
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -78,7 +78,7 @@ namespace ProjetoCrudVarejo
 
             string sexo = Convert.ToString(row.Cells[2].Value);
             RbdMasculino.Checked = string.Equals(sexo, "M", StringComparison.OrdinalIgnoreCase);
-            RbdFeminino.Checked = string.Equals(sexo, "F", StringComparison.OrdinalIgnoreCase);
+            radioButton2.Checked = string.Equals(sexo, "F", StringComparison.OrdinalIgnoreCase);
 
             txtelefone.Text = Convert.ToString(row.Cells[3].Value);
         }
@@ -94,7 +94,7 @@ namespace ProjetoCrudVarejo
             Txtnome.Clear();
             txtelefone.Clear();
             RbdMasculino.Checked = false;
-            RbdFeminino.Checked = false;
+            radioButton2.Checked = false;
             Txtnome.Focus();
         }
 
