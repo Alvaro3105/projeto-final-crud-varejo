@@ -1,16 +1,9 @@
-﻿namespace ProjetoCrudVarejo
+namespace ProjetoCrudVarejo
 {
     partial class frmPrincipal
     {
-        /// <summary>
-        /// Variável de designer necessária.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Limpar os recursos que estão sendo usados.
-        /// </summary>
-        /// <param name="disposing">true se for necessário descartar os recursos gerenciados; caso contrário, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,10 +15,6 @@
 
         #region Código gerado pelo Windows Form Designer
 
-        /// <summary>
-        /// Método necessário para suporte ao Designer - não modifique 
-        /// o conteúdo deste método com o editor de código.
-        /// </summary>
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -67,7 +56,8 @@
             // 
             this.cadastroDeFornecedorToolStripMenuItem.Name = "cadastroDeFornecedorToolStripMenuItem";
             this.cadastroDeFornecedorToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.cadastroDeFornecedorToolStripMenuItem.Text = "cadastro de Fornecedor";
+            this.cadastroDeFornecedorToolStripMenuItem.Text = "Cadastro de Fornecedor";
+            this.cadastroDeFornecedorToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeFornecedorToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -84,7 +74,6 @@
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
@@ -95,4 +84,3 @@
         private System.Windows.Forms.ToolStripMenuItem cadastroDeFornecedorToolStripMenuItem;
     }
 }
-
