@@ -1,12 +1,14 @@
 using MySql.Data.MySqlClient;
 using System;
+using System.Configuration;
 using System.Data;
 
 namespace ProjetoCrudVarejo
 {
     internal class ConexaoFornecedor
     {
-        private const string ConnectionString = "Persist Security info=false;server=localhost;database=projetocrudvarejo;user=root;pwd=;";
+        private static string ConnectionString =>
+            ConfigurationManager.ConnectionStrings["ProjetoCrudVarejoDb"].ConnectionString;
 
         public bool ExecutarComandos(string sql, params MySqlParameter[] parametros)
         {
