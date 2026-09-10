@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
 using System.Windows.Forms;
 
 namespace ProjetoCrudVarejo
@@ -17,13 +10,20 @@ namespace ProjetoCrudVarejo
             InitializeComponent();
         }
 
-        ConexaoCliente bd = new ConexaoCliente();
-        string tabela = "tblCliente";
-
         private void cadastroDeClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCliente c = new frmCliente();
-            c.ShowDialog();
+            using (var telaCliente = new frmCliente())
+            {
+                telaCliente.ShowDialog(this);
+            }
+        }
+
+        private void cadastroDeFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var telaFornecedor = new Fornecedor_())
+            {
+                telaFornecedor.ShowDialog(this);
+            }
         }
     }
 }
